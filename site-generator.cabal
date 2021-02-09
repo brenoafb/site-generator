@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: f9beda09d25aa59e62e3f9f98993a60e8e2db09509edb7336751ec7267a7b1b0
+-- hash: e1d3c954149778107aca47de0c5dffad4fca158be67d08c5197e331378130361
 
 name:           site-generator
 version:        0.1.0.0
@@ -28,6 +28,8 @@ source-repository head
 library
   exposed-modules:
       Lib
+      Utils
+      Views
   other-modules:
       Paths_site_generator
   hs-source-dirs:
@@ -37,6 +39,7 @@ library
     , base >=4.7 && <5
     , commonmark
     , directory
+    , http-types
     , mtl
     , scotty
     , text
@@ -54,6 +57,7 @@ executable site-generator-exe
     , base >=4.7 && <5
     , commonmark
     , directory
+    , http-types
     , mtl
     , scotty
     , site-generator
@@ -73,6 +77,7 @@ test-suite site-generator-test
     , base >=4.7 && <5
     , commonmark
     , directory
+    , http-types
     , mtl
     , scotty
     , site-generator
